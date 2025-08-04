@@ -42,6 +42,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
+const searchButton=document.getElementById('searchButton');
 const searchInput = document.getElementById('searchInput');
 const dropdown = document.getElementById('dropdown');
 const items = dropdown.querySelectorAll('.item');
