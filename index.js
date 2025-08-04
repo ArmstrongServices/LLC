@@ -104,7 +104,20 @@ document.getElementById('searchButton').addEventListener('click', () => {
     alert("No matching section found for: " + inputVal);
   }
 
-  // Attach these only once and outside any other handler
+
+
+// Click on search icon
+  searchButton.addEventListener('click', scrollToMatchingSection);
+
+// Press Enter inside input field
+  searchInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault(); // Prevent default form submission behavior
+      scrollToMatchingSection();
+    }
+  });
+
+  // ✅ Attach these only once and outside any other handler
   searchButton.addEventListener('click', scrollToMatchingSection);
   searchInput.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
@@ -112,5 +125,5 @@ document.getElementById('searchButton').addEventListener('click', () => {
       scrollToMatchingSection();
     }
   });
-
 });
+
