@@ -87,15 +87,16 @@ document.addEventListener('click', (e) => {
 });
 
 document.getElementById('searchButton').addEventListener('click', () => {
-  const inputVal = searchInput.value.trim().toLowerCase();
-  const allSections = document.querySelectorAll('section');
+  const searchButton = document.getElementById('searchButton');
+  const searchInput = document.getElementById('searchInput');
 
   function scrollToMatchingSection() {
     const inputVal = searchInput.value.trim().toLowerCase();
+    const allSections = document.querySelectorAll('section');
 
     for (const section of allSections) {
       if (section.id.toLowerCase() === inputVal) {
-        section.scrollIntoView({behavior: 'smooth'});
+        section.scrollIntoView({ behavior: 'smooth' });
         return;
       }
     }
@@ -103,14 +104,13 @@ document.getElementById('searchButton').addEventListener('click', () => {
     alert("No matching section found for: " + inputVal);
   }
 
-// Click on search icon
+  // Attach these only once and outside any other handler
   searchButton.addEventListener('click', scrollToMatchingSection);
-
-// Press Enter inside input field
   searchInput.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
-      event.preventDefault(); // Prevent default form submission behavior
+      event.preventDefault();
       scrollToMatchingSection();
     }
   });
+
 });
