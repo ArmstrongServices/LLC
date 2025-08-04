@@ -72,7 +72,7 @@ body {
     font-weight: 400;
     color: var(--white-1);
     line-height: var(--line-height-normal);
-    background: var(--black);
+    background: chocolate;
     overflow-x: hidden;
 }
 
@@ -337,8 +337,10 @@ body:not(.user-is-tabbing) a:focus {
 
 .nav {
     display: flex;
-    justify-content: flex-end;
-    padding: var(--gutter-normal) 0;
+    justify-content: center;
+    padding: 0;
+    background-color: chocolate;
+    border-bottom-color: #eeeeee;
 }
 
 .nav__items {
@@ -346,8 +348,10 @@ body:not(.user-is-tabbing) a:focus {
     list-style: none;
 }
 
-.nav__item:not(:last-child) {
+.nav__item {
     margin-right: var(--gutter-medium);
+    margin-left: 20px;
+    margin-top: 8px;
 }
 
 @media(max-width: 500px) {
@@ -404,8 +408,8 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 
 .header {
-    background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
-        url('./images/header.jpg');
+    background: linear-gradient(rgba(239, 234, 234, 0.23), rgba(220, 212, 212, 0.22)),
+        url('./images/header2.png');
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -556,7 +560,7 @@ body:not(.user-is-tabbing) a:focus {
     .about__text {
         flex: 0 0 35%;
     }
-    
+
     .about__photo-container {
         flex: 1;
         margin: 0 var(--gutter-huge) 0 0;
@@ -609,5 +613,80 @@ body:not(.user-is-tabbing) a:focus {
 @media(max-width: 500px) {
     .footer {
         padding: var(--gutter-medium) 0;
-    } 
+    }
+}
+
+#search-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 300px;
+    font-family: Arial, sans-serif;
+    color: black;
+    position: relative;
+}
+
+.search-wrapper {
+    position: relative;
+    margin-top: 20px;
+    justify-content: flex-end;
+}
+
+.search-wrapper input {
+    width: 100%;
+    padding: 8px 35px 8px 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: gray;
+    font-size: 16px;
+    cursor: pointer;
+}
+#dropdown {
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 180px;
+    overflow-y: auto;
+    display: none; /* Hidden by default */
+    z-index: 10;
+}
+
+#dropdown .item {
+    padding: 8px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+#dropdown .item:hover {
+    background-color: #f2f2f2;
+}
+
+#hr {
+    color: beige;
+}
+.form {
+    display: inline-block;
+    justify-content: start;
+}
+
+.schedule {
+    display: inline-block;
+    justify-content: end;
+}
+
+.top {
+    display: inline-block;
+    justify-content: start;
 }

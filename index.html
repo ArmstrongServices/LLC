@@ -24,23 +24,22 @@
 
   <!-- Put your site title here -->
   <title>
-    Armstrong's Artists
+    Armstrong Services, LLC
   </title>
-  <meta name="description" content="software engineering profile.">
+  <meta name="Armstrong Services" content="Armstrong Services, LLC">
   <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
-  <meta name="keywords" content="To'Nighsha Thompson-Armstrong, software engineer, fullstack developer, frontend, backend, software developer" />
+  <meta name="keywords" content="Armstrong Services, LLC, services, lawn, lawn care, pressure washing, movers, moving service" />
   <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
 
-  <!-- ***** Header ***** -->
-
-  <header class="header" role="banner" id="top">
-    <div class="row">
+  <!-- ***** Navigation Bar ***** -->
+    <span class="row">
       <nav class="nav" role="navigation">
         <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+          <li class="nav__item"><span><img src="./images/ArmstrongServiceslogo.png" alt="profile pic" height="65px" width="100px"/></span></li>
+          <li class="nav__item"><a href="#work" class="nav__link">Services</a></li>
           <li class="nav__item"><a href="#clients" class="nav__link">Clients</a></li>
           <li class="nav__item">
             <a href="#about" class="nav__link">About</a>
@@ -48,113 +47,155 @@
           <li class="nav__item">
             <a href="#contact" class="nav__link">Contact</a>
           </li>
-        </ul>
+          </ul>
+
+          <ul id="search-list">
+            <li class="search-li">
+              <div class="search-wrapper">
+                <input type="text" id="searchInput" placeholder="Search Locations" autocomplete="off">
+                <button type="button" id="searchButton" class="search-icon">&#128269;</button>
+              </div>
+              </li>
+              <div id="dropdown">
+                <li class="item">Charlotte</li>
+                <li class="item">Concord</li>
+                <li class="item">Gastonia</li>
+                <li class="item">Huntersville</li>
+                <li class="item">Monroe</li>
+              </div>
+          </ul>
+
+
       </nav>
-    </div>
-    <div class="header__text-box row">
-      <div class="header__text">
-        <h1 class="heading-primary">
+    </span>
+    <hr>
+  <!-- ***** Header ***** -->
+  <header class="header" role="banner" id="top">
+    <div class="header__text-box row" >
+      <div class="header__text" >
+        <h1 class="heading-primary" >
           <!-- Replace the following name with your name -->
-          <span>Armstrong's Artists</span>
+          <span>Schedule Service Now!</span>
         </h1>
         <!-- Put a small paragraph about yourself -->
-        <p>"Art is the expression of one's inner self." </p>
-        <div align="center"><img src="./images/Armstrong's%20Artists%20logo.svg" alt="profile pic" height="200px" width="250px"/></div>
-        <a href="#contact" class="btn btn--pink">Contact Us:</a>
-      </div>
+        <p>"Quality service you can count on." </p>
+        <div id="form">
+          <form action="https://formsubmit.co/richard_armstrong1988@yahoo.com" method="POST">
+            <div class="form-group">
+              <input type="text" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Your Address" required>
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="Your Phone Number" required>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="What service are you looking for?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn--pink">Send</button>
+          </form>
     </div>
-  </header>
 
+  </header>
   <main role="main">
 
     <!-- ***** Work ***** -->
 
     <section class="work" id="work">
       <div class="row">
-        <h2>My Work</h2>
+        <h2>Services</h2>
         <div class="work__boxes">
 
           <!-- Each div with the work__box class is a project. -->
 
           <div class="work__box">
             <div class="work__text">
-              <h3>Playdate Scheduler</h3>
+              <h3>Lawn Care</h3>
               <p>
-                A free open source mobile application for parents to schedule playdates.
+                Lawnmowers and equipment will be provided. There are discounted prices for customers who
+                want their front and backyards cut. Raking leaves, bagging tree branches, and
+                weed wacker services can also be provided at an additional charge.
               </p>
               <ul class="work__list">
-                <li>Java</li>
-                <li>ROOM framework</li>
-                <li>SQLite</li>
-                <li>Groovy</li>
+                <li>Front Yard Only: $30</li>
+                <li>Front and Backyard: $45</li>
+                <li>Tree Branches: $20</li>
+                <li>Leaves: $25</li>
               </ul>
 
               <div class="work__links">
                 <a href="#" target="_blank" class="link__text">
-                  Visit Site <span>&rarr;</span>
+                  Book Now <span>&rarr;</span>
                 </a>
                 <a href="#" title="View Source Code" target="_blank">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
+                  <img src="./images/logonobg.png" class="work__code" alt="GitHub">
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="images/project1.jpg" class="work__image"/>
+              <img src="images/lawncare.jpg" class="work__image" width="1354px" height="767px"/>
             </div>
           </div>
 
           <div class="work__box">
             <div class="work__text">
-              <h3>Parts Inventory Website</h3>
+              <h3>Pressure Washing</h3>
               <p>
-                A website that keeps track of replaceable Furby parts. The project also
-                has add,search, and delete functionality.
+                State of the art pressure washer will be provided. Usage of clients water supply is necessary.
+                Before and after photos are sent after the job is complete as a courtesy.
+
               </p>
               <ul class="work__list">
-                <li>Springboot</li>
-                <li>Java</li>
-                <li>IntelliJ IDEA</li>
-                <li>CRUD</li>
+                <li>Front of home: $50</li>
+                <li>Front & sides of home: $100</li>
+                <li>Front, sides, & back of home: $150</li>
+                <li>Car washing and detailing: $35</li>
               </ul>
 
               <div class="work__links">
                 <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
+                  Book Now <span>&rarr;</span>
                 </a>
                 <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
+                  <img src="./images/logonobg.png" class="work__code" title="View Source Code" alt="GitHub">
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="./images/project2.png" class="work__image" alt="Project 1" />
+              <img src="./images/pressure%20washing.jpg" class="work__image" alt="Project 1" width="1354px" height="767px" />
             </div>
           </div>
 
           <div class="work__box">
             <div class="work__text">
-              <h3>Hotel Booking Website</h3>
+              <h3>Movers</h3>
               <p>
-                This website allow users to book hotel rooms within timeframes.
+                Truck are not provided with this service, only manual labor. Client's
+                items must be fully packed before move. If more than one laborer is needed, the client must
+                let Armstrong Services, LLC know beforehand of pay a $60 fee for time wasted.
               </p>
               <ul class="work__list">
-                <li>Docker</li>
-                <li>MYSQL</li>
-                <li>Java</li>
-                <li>AWS</li>
+                <li>2 hours: $40</li>
+                <li>3 hours: $70</li>
+                <li>4 hours: $85</li>
+                <li>5 hours +: $20/hr</li>
               </ul>
 
               <div class="work__links">
                 <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
+                  Book Now <span>&rarr;</span>
                 </a>
                 <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
+                  <img src="./images/logonobg.png" class="work__code" title="View Source Code" alt="GitHub">
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="./images/project3.png" class="work__image" alt="Project 3" />
+              <img src="./images/movers.jpg" class="work__image" alt="Project 3" width="1354px" height="767px" />
             </div>
           </div>
         </div>
@@ -168,13 +209,15 @@
         <h2>Clients</h2>
         <div class="client__logos">
           <!-- Add logos of the clients or companies you'have worked with. -->
-          <img src="./images/WGUlogo.png" class="client__logo" alt="Company 2" />
+          <img src="./images/logonobg.png" class="client__logo" alt="Company 2" />
+
           <!-- <img src="./images/freelancerlogo.png" class="client__logo" alt="Company 3" />
           <img src="./images/bullseye.png" class="client__logo" alt="Company 1" />
           <img src="./images/mighty-furnitures.png" class="client__logo" alt="Company 1" />
           <img src="./images/fastlane.png" class="client__logo" alt="Company 3" />
           <img src="./images/chippy.png" class="client__logo" alt="Company 1" /> -->
         </div>
+        <p>Returning clients are welcome and can receive a monthly discount if they subscribe.</p>
       </div>
     </section>
 
@@ -187,27 +230,21 @@
           <div class="about__text">
             <!-- Replace the below paragraph with info about yourself -->
             <p>
-              As a junior software engineer proficient in both Java and Python,
-              I’ve developed a solid foundation in object-oriented programming,
-              data structures, and algorithms, which are essential for building efficient
-              and maintainable software. I’m comfortable working with version control systems
-              like Git, and I understand basic software development lifecycle concepts including
-              agile methodologies. In Java, I’ve worked with frameworks like Spring Boot for
-              building backend applications, while in Python I’ve used libraries such as Flask
-              and Pandas for web development and data manipulation. I can write clean, readable,
-              and testable code, and I’m familiar with unit testing using JUnit for Java and
-              pytest for Python. Additionally, I’ve had hands-on experience with RESTful APIs,
-              SQL databases, and basic debugging tools, which allow me to contribute
-              effectively to team projects and collaborate with other developers.
-              Thank you for your time!
+              Meet Richard Armstrong, a dedicated service provider committed to delivering top-quality
+              work with a personal touch. Whether you need lawn care, moving assistance, or pressure
+              washing, Richard takes pride in offering reliable, efficient, and professional service that
+              exceeds expectations. With a strong work ethic and attention to detail, he treats every job—big
+              or small—as if it were his own. When you choose Richard Armstrong, you're not just hiring a
+              helping hand; you're partnering with someone who values integrity, customer satisfaction,
+              and quality results. Let him make your home or property look its best today.
             </p>
             <!-- Provide a link to your resume -->
-            <a href="./images/To'Nighsha%20Thompson-Armstrong%20Resume%20(Online)(2025).pdf" class="btn">My Resume</a>
+            <a href="./images/Richard_Armstrong_Disclaimer_With_Signature.pdf" class="btn">Disclaimer</a>
           </div>
 
           <div class="about__photo-container">
             <!-- Add a nice photo of yourself -->
-            <img src="./images/websitepic2.jpg" alt="profie picture" />
+            <img src="./images/businessowner.png" alt="profie picture" />
           </div>
         </div>
       </div>
@@ -221,22 +258,31 @@
       <h2>Contact Us:</h2>
       <div class="contact__info">
         <p>
-          Thank you so much for your consideration. I would love to discuss
-          the position at your company with you further.
-          I can be reached at via the email listed below. I am truly excited
-          about the possibility of joining your company.
+          Thank you so much for your consideration. If you need to reach out to the company, we
+          can reached at the email address listed below during normal business hours (M-F).
         </p>
         <!-- Replace the email with yours -->
-        <a href="mailto:tonighsha.thompson@yahoo.com" class="btn">tonighsha.thompson@yahoo.com</a>
+        <a href="mailto:richard_armstrong1988@yahoo.com" class="btn">richard_armstrong1988@yahoo.com</a>
       </div>
     </div>
   </section>
+
+  <!-- ***** Search Bar ***** -->
+
+  <
+
+  <!-- Sections to scroll to -->
+  <section id="Charlotte" style="margin-top: 200px;">Charlotte Section<p>We service this area!</p></section>
+  <section id="Concord" style="margin-top: 200px;">Corcord Section<p>We service this area!</p></section>
+  <section id="Gastonia" style="margin-top: 200px;">Gastonia Section<p>We service this area!</p></section>
+  <section id="Huntersville" style="margin-top: 200px;">Huntersville Section<p>We service this area!</p></section>
+  <section id="Monroe" style="margin-top: 200px;">Monroe Section<p>We service this area!</p></section>
 
   <!-- ***** Payment ***** -->
 
   <section align="center">
     <p>
-      If paying for a product or service click "Pay Now":
+      If paying for a product or service, please click "Pay Now":
     </p>
     <div id="paypal-container-AP32449KXGHV4"></div>
     <style>.pp-AP32449KXGHV4{text-align:center;border:none;border-radius:0.25rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-family:"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
@@ -253,37 +299,20 @@
     <div class="row">
       <!-- Update the links to point to your accounts -->
       <ul class="footer__social-links">
-        <li class="footer__social-link-item">
-          <a href="#" title="Link to Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
-          </a>
-        </li>
+
         <li class="footer__social-link-item">
           <a href="https://github.com/tth1086" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
+            <img src="./images/logonobg.png" class="footer__social-image" alt="Github">
           </a>
         </li>
-        <li class="footer__social-link-item">
-          <a href="#" title="Link to Codepen Profile">
-            <img src="./images/codepen.svg" class="footer__social-image" alt="Codepen">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href=https://www.linkedin.com/in/tonighsha-thompson-armstrong-8a3795377/">
-            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
-          </a>
-        </li>
+
       </ul>
 
       <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
       <p>
-        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
+        &copy; 2025 - Armstrong Services, LLC
       </p>
       <div class="footer__github-buttons">
-        <iframe
-          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
-          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
-        </iframe>
       </div>
     </div>
   </footer>
