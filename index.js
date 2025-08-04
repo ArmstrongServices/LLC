@@ -104,6 +104,15 @@ document.getElementById('searchButton').addEventListener('click', () => {
     alert("No matching section found for: " + inputVal);
   }
 
+  // ✅ Attach these only once and outside any other handler
+  searchButton.addEventListener('click', scrollToMatchingSection);
+  searchInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      scrollToMatchingSection();
+    }
+  });
+
 
 
 // Click on search icon
@@ -116,14 +125,15 @@ document.getElementById('searchButton').addEventListener('click', () => {
       scrollToMatchingSection();
     }
   });
-
-  // ✅ Attach these only once and outside any other handler
-  searchButton.addEventListener('click', scrollToMatchingSection);
-  searchInput.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
-      event.preventDefault();
-      scrollToMatchingSection();
-    }
-  });
 });
+
+// ✅ Attach these only once and outside any other handler
+searchButton.addEventListener('click', scrollToMatchingSection);
+searchInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    scrollToMatchingSection();
+  }
+});
+
 
